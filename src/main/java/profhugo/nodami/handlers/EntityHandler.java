@@ -49,18 +49,18 @@ public class EntityHandler {
                 String message = String.format("Type of damage received: %s\nAmount: %.3f\nTrue Source (mob id): %s\n",
                         source.getDamageType(), event.getAmount(), source.getTrueSource() == null ? "null"
                                 : EntityList.getKey(source.getTrueSource().getClass()).toString());
-                ((EntityPlayer) entity).sendMessage(new TextComponentString(message));
+                entity.sendMessage(new TextComponentString(message));
             }
             if (entity instanceof EntityPlayer) {
                 if (NodamiConfig.excludePlayers)
                     return;
                 ItemStack is = entity.getHeldItemMainhand();
                 for (String s : NodamiConfig.itemSrcWhitelistMain) {
-                    if (is.getItem().getUnlocalizedName(is).equals(s)) return;
+                    if (is.getItem().getRegistryName()!=null&&is.getItem().getRegistryName().toString().equals(s)) return;
                 }
                 is = entity.getHeldItemOffhand();
                 for (String s : NodamiConfig.itemSrcWhitelistOff) {
-                    if (is.getItem().getUnlocalizedName(is).equals(s)) return;
+                    if (is.getItem().getRegistryName()!=null&&is.getItem().getRegistryName().toString().equals(s)) return;
                 }
             }
             if (NodamiConfig.excludeAllMobs && !(entity instanceof EntityPlayer)) {
