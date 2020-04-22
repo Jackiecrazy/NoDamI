@@ -1,7 +1,7 @@
 ﻿# NoDamI
 
 ## About:
-This mod aims to improve PvE and PvP by removing/changing the redundant damage immunity system implemeted by Mojang long ago, without breaking the game.
+This mod aims to improve PvE and PvP by removing/changing the redundant damage immunity system implemeted by Mojang long ago, without breaking the game. This is a fork by Jackiecrazy for 1.12.2.
 (more info on damage immunity here:http://minecraft.gamepedia.com/Damage#Damage_immunity)
 
  
@@ -26,9 +26,13 @@ This mod generates a config file for users to change parts of the mod as they se
 
 - Toggles for core functionalities of this mod
 
+- Toggle for an experimental "difference mode"
+
 - List of entities that need to give iFrames on attacking
 
 - List of entities that need to receive iFrames on receiving attacks
+
+- List of items that need to give iFrames on attacking in mainhand or offhand
 
 - How much does players' attacks need to be charged to do anything (default: 10%, or 0.1)
 
