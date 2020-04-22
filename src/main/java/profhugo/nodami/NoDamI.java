@@ -1,5 +1,6 @@
 package profhugo.nodami;
 
+import com.google.common.cache.Cache;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,7 @@ public class NoDamI {
 
 	@SidedProxy(serverSide = "profhugo.nodami.proxy.CommonProxy", clientSide = "profhugo.nodami.proxy.ClientProxy")
 	public static CommonProxy proxy;
+
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
